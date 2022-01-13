@@ -1,0 +1,242 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ccf793b7ca1cc645b9cd36d753b8e3c, type: 3}
+  m_Name: OpenWeatherAPI
+  m_EditorClassIdentifier: 
+  url: https://graphql-weather-api.herokuapp.com
+  queries:
+  - name: GetCityWeatherById
+    type: 0
+    query: "query GetCityWeatherById{\n    getCityById(  id :\"2950159\" ){\n       
+      name\n        weather{\n            temperature{\n                actual\n       
+      }\n            clouds{\n                all\n        }\n            wind{\n               
+      speed\n                deg\n        }\n            summary{\n               
+      title\n                description\n                icon\n        }\n           
+      timestamp\n        }\n    }\n}"
+    queryString: getCityById
+    returnType: City
+    queryOptions:
+    - getCityByName
+    - getCityById
+    fields:
+    - index: 1
+      name: name
+      type: String
+      parentIndexes: 
+      hasSubField: 0
+      possibleFields:
+      - name: id
+        type: ID
+      - name: name
+        type: String
+      - name: country
+        type: String
+      - name: coord
+        type: Coordinates
+      - name: weather
+        type: Weather
+      hasChanged: 0
+    - index: 4
+      name: weather
+      type: Weather
+      parentIndexes: 
+      hasSubField: 1
+      possibleFields:
+      - name: id
+        type: ID
+      - name: name
+        type: String
+      - name: country
+        type: String
+      - name: coord
+        type: Coordinates
+      - name: weather
+        type: Weather
+      hasChanged: 0
+    - index: 1
+      name: temperature
+      type: Temperature
+      parentIndexes: 01000000
+      hasSubField: 1
+      possibleFields:
+      - name: summary
+        type: Summary
+      - name: temperature
+        type: Temperature
+      - name: wind
+        type: Wind
+      - name: clouds
+        type: Clouds
+      - name: timestamp
+        type: Int
+      hasChanged: 0
+    - index: 0
+      name: actual
+      type: Float
+      parentIndexes: 0100000002000000
+      hasSubField: 0
+      possibleFields:
+      - name: actual
+        type: Float
+      - name: feelsLike
+        type: Float
+      - name: min
+        type: Float
+      - name: max
+        type: Float
+      hasChanged: 0
+    - index: 3
+      name: clouds
+      type: Clouds
+      parentIndexes: 01000000
+      hasSubField: 1
+      possibleFields:
+      - name: summary
+        type: Summary
+      - name: temperature
+        type: Temperature
+      - name: wind
+        type: Wind
+      - name: clouds
+        type: Clouds
+      - name: timestamp
+        type: Int
+      hasChanged: 0
+    - index: 0
+      name: all
+      type: Int
+      parentIndexes: 0100000004000000
+      hasSubField: 0
+      possibleFields:
+      - name: all
+        type: Int
+      - name: visibility
+        type: Int
+      - name: humidity
+        type: Int
+      hasChanged: 0
+    - index: 2
+      name: wind
+      type: Wind
+      parentIndexes: 01000000
+      hasSubField: 1
+      possibleFields:
+      - name: summary
+        type: Summary
+      - name: temperature
+        type: Temperature
+      - name: wind
+        type: Wind
+      - name: clouds
+        type: Clouds
+      - name: timestamp
+        type: Int
+      hasChanged: 0
+    - index: 0
+      name: speed
+      type: Float
+      parentIndexes: 0100000006000000
+      hasSubField: 0
+      possibleFields:
+      - name: speed
+        type: Float
+      - name: deg
+        type: Int
+      hasChanged: 0
+    - index: 1
+      name: deg
+      type: Int
+      parentIndexes: 0100000006000000
+      hasSubField: 0
+      possibleFields:
+      - name: speed
+        type: Float
+      - name: deg
+        type: Int
+      hasChanged: 0
+    - index: 0
+      name: summary
+      type: Summary
+      parentIndexes: 01000000
+      hasSubField: 1
+      possibleFields:
+      - name: summary
+        type: Summary
+      - name: temperature
+        type: Temperature
+      - name: wind
+        type: Wind
+      - name: clouds
+        type: Clouds
+      - name: timestamp
+        type: Int
+      hasChanged: 0
+    - index: 0
+      name: title
+      type: String
+      parentIndexes: 0100000009000000
+      hasSubField: 0
+      possibleFields:
+      - name: title
+        type: String
+      - name: description
+        type: String
+      - name: icon
+        type: String
+      hasChanged: 0
+    - index: 1
+      name: description
+      type: String
+      parentIndexes: 0100000009000000
+      hasSubField: 0
+      possibleFields:
+      - name: title
+        type: String
+      - name: description
+        type: String
+      - name: icon
+        type: String
+      hasChanged: 0
+    - index: 2
+      name: icon
+      type: String
+      parentIndexes: 0100000009000000
+      hasSubField: 0
+      possibleFields:
+      - name: title
+        type: String
+      - name: description
+        type: String
+      - name: icon
+        type: String
+      hasChanged: 0
+    - index: 4
+      name: timestamp
+      type: Int
+      parentIndexes: 01000000
+      hasSubField: 0
+      possibleFields:
+      - name: summary
+        type: Summary
+      - name: temperature
+        type: Temperature
+      - name: wind
+        type: Wind
+      - name: clouds
+        type: Clouds
+      - name: timestamp
+        type: Int
+      hasChanged: 0
+    isComplete: 1
+  mutations: []
+  subscriptions: []
+  loading: 0

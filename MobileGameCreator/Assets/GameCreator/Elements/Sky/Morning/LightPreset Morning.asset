@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da1b2062db0544c61a61e3c085b50dfc, type: 3}
+  m_Name: LightPreset Morning
+  m_EditorClassIdentifier: 
+  sun:
+    rotation: {x: 372, y: 360, z: 0}
+    intensity: 2
+    color: {r: 1, g: 0.9372549, b: 0.84313726, a: 0}
+  fog:
+    enabled: 1
+    density: 0.04
+    color: {r: 0.4392157, g: 0.54901963, b: 0.5882353, a: 0}
+  skybox:
+    material: {fileID: 2100000, guid: e78c43cc9c9ca422da72b54812a22e4a, type: 2}
